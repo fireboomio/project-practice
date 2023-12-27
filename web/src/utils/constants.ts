@@ -1,0 +1,1 @@
+export const WX_LOGIN_POST_MESSAGE = 'wx.login'
