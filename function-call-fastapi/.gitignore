@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Sphinx documentation
+docs/_build/
+docs/api/generated/
+docs/api/modules.rst
+docs/api/*.rst
+docs/api/conf.py
+docs/api/index.rst
+
+# Flake8 lint
+.flake8
+__pycache__/
+.cache/
+.tox/
+.pytest_cache/
+
+# Pytest
+.coverage
+htmlcov/
+.coverage.*
+.pytest_cache/
+pytest_debug.log
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Celery stuff:
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.local
+.env.*.local
+.env.override
+.pyenv-vars
+
+# VS Code config
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# FastAPI stuff:
+__pycache__/
+*.log
+.cache/
+.idea/
+.idea_modules/
+.vs/
+
+db/
+

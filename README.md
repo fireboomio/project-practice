@@ -9,3 +9,5 @@
 - `admin`: 管理后台业务沉淀
 - `taro`: 跨平台小程序业务沉淀
 - `shared`: 项目间共享，主要是前端跨项目通用逻辑
+- `function-call-fastapi`: 为 GPT functioncalling 提供 functions
+- `payment`: 支付相关后端沉淀

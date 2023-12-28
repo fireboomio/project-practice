@@ -1,0 +1,10 @@
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+
+symbolic-links=0
+
+collation-server = utf8_general_ci
+init-connect='SET NAMES utf8'
+character-set-server = utf8
