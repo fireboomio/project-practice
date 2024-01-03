@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG155.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T084352Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22WechatIMG155.jpg%22&X-Amz-Signature=699c10af1cd47c08cc8a8f044a508f8878385cee63edeee18823ecbf844670a5" width="320" height="150" alt="one-api logo"></a>
+  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG155.jpg" width="320" height="150" alt="one-api logo"></a>
 </p>
 
 <div align="center">
@@ -18,7 +18,7 @@ _✨ App支付 ✨_
 
 ## 整体交互流程图
 
-![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/123.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T084016Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22123.jpeg%22&X-Amz-Signature=8e37d6b21ac15202e0e6a1d018d78fa921746ae87c453ea99b27a365256a946c)
+![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/123.jpeg)
 
 以下对重点步骤做简要说明：
 • 第 1 步用户在商户 App 客户端/小程序中购买商品下单。

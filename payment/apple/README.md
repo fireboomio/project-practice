@@ -1,5 +1,5 @@
 <p align="center">
-  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG157.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T094603Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22WechatIMG157.jpg%22&X-Amz-Signature=541cfa5d00b1e5b5b0807363bd27a68646c102fc88f4908fa7ba798f964b6bc4" width="320" height="140" alt="one-api logo"></a>
+  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG157.jpg" width="320" height="140" alt="one-api logo"></a>
 </p>
 
 <div align="center">
@@ -11,7 +11,7 @@ _✨ Apple 支付 ✨_
 </div>
 
 ## 整体交互流程图
-![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/127.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T094327Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22127.png%22&X-Amz-Signature=1816e360aa2c26523ec45eb983625d77533e4afdd6a97a62205a006e0c33d4b0)
+![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/127.png)
 
 
 直接购买流程：

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href=""><img src="https://raw.githubusercontent.com/songquanpeng/one-api/main/web/public/logo.png" width="150" height="150" alt="one-api logo"></a>
+  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/logo.png" width="150" height="150" alt="one-api logo"></a>
 </p>
 
 <div align="center">
@@ -86,7 +86,7 @@ cuvicorn app.main:app --host 0.0.0.0 --port 5001
 
 架构图
 
-![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG150.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T080054Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22WechatIMG150.jpg%22&X-Amz-Signature=5424c5be7af147154c2bda230765d37eabadf6d66e41358a6c8b01b3709adfaf)
+![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG150.jpg)
 
 系统本身开箱即用。
 

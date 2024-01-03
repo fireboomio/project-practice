@@ -1,5 +1,5 @@
 <p align="center">
-  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG158.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T104253Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22WechatIMG158.jpg%22&X-Amz-Signature=01e77dfb699d6358635474f2599be4d1d745799a3d26ae8cd65f9e8eae8481ee" width="320" height="140" alt="one-api logo"></a>
+  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG158.jpg" width="320" height="140" alt="one-api logo"></a>
 </p>
 
 <div align="center">
@@ -11,7 +11,7 @@ _✨ 支付定时任务 ✨_
 </div>
 
 ## 整体交互流程图
-![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG39164.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T111708Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22WechatIMG39164.jpg%22&X-Amz-Signature=c53051ef39d67f4aad4ab0e667a5f39270449ee5013640d8765db5c79b7e04b4)
+![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG39164.jpg)
 
 
 ## 功能描述

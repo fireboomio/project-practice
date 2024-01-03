@@ -1,5 +1,5 @@
 <p align="center">
-  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG156.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T092517Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22WechatIMG156.jpg%22&X-Amz-Signature=920d36b5f58b86bfc5fd8e8e7c62cbb557c50b09245d16b3a34b9dd191265774" width="320" height="140" alt="one-api logo"></a>
+  <a href=""><img src="https://ft-dev.oss-cn-shanghai.aliyuncs.com/WechatIMG156.jpg" width="320" height="140" alt="one-api logo"></a>
 </p>
 
 <div align="center">
@@ -11,7 +11,7 @@ _✨ PC、小程序、H5 支付 ✨_
 </div>
 
 ## 整体交互流程图
-![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/126.bmp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tP8iEBMfrzVNSW7k148%2F20231228%2Foss-cn-shanghai%2Fs3%2Faws4_request&X-Amz-Date=20231228T093819Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3Bfilename%3D%22126.bmp%22&X-Amz-Signature=84a9a4245855a83815748f7af776e1829155bbb104f2941064bf4010dbfd27c2)
+![Alt text](https://ft-dev.oss-cn-shanghai.aliyuncs.com/126.bmp)
 
 
 ## 功能描述
