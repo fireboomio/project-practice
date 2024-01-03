@@ -70,7 +70,6 @@ class AutoFunctionGenerator:
                                               'required': ['input_json']}}"
 
             # 定义输入
-
             system_message = "你是一位优秀的数据分析师，现在有一个函数的详细声明如下：%s" % function_description
             user_message = "请根据这个函数声明，为我生成一个JSON Schema对象描述。这个描述应该清晰地标明函数的输入和输出规范。具体要求如下：\
                             1. 提取函数名称：%s，并将其用作JSON Schema中的'name'字段  \

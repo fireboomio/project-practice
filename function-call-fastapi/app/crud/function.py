@@ -1,72 +1,57 @@
+import inspect
 import json
 
 from sqlalchemy.orm import Session
 
 from app.models.function import Function
+from app.utils import functions as utils_functions
 from app.utils.auto_tool_generator import AutoFunctionGenerator
-from app.utils.functions import (
-    gpt_dall_e,
-    google_search
-)
 
 
 def get_functions(db: Session):
-    db_functions = db.query(
-        Function.name,
-        Function.description,
-        Function.parameters
-    ).all()
+    db_functions = db.query(Function.name, Function.description, Function.parameters).all()
+    return [
+        {"name": func.name, "description": func.description, "parameters": func.parameters}
+        for func in db_functions
+    ]
 
-    functions = []
-    for func in db_functions:
-        function_data = {
-            "name": func.name,
-            "description": func.description,
-            "parameters": func.parameters
-        }
-        functions.append(function_data)
 
-    return functions
+def get_function_by_name(db: Session, name: str):
+    return db.query(Function).filter(Function.name == name).first()
 
 
 def create_function(db: Session):
-    functions_list = [gpt_dall_e, google_search]
-    generator = AutoFunctionGenerator(functions_list)
-    function_descriptions = generator.auto_generate()
-    for function in function_descriptions:
-        db_function = Function(
-            name=function.get('name'),
-            description=function.get('description'),
-            parameters=function.get('parameters'),
-        )
-        db.add(db_function)
-        db.commit()
-        db.refresh(db_function)
-    functions = get_functions(db)
-    return functions
+    all_functions = inspect.getmembers(utils_functions, inspect.isfunction)
+
+    for name, func in all_functions:
+        if not get_function_by_name(db, name):
+            generator = AutoFunctionGenerator([func])
+            function_descriptions = generator.auto_generate()
+            for function in function_descriptions:
+                db_function = Function(
+                    name=function.get('name'),
+                    description=function.get('description'),
+                    parameters=function.get('parameters'),
+                )
+                db.add(db_function)
+            db.commit()
 
 
 def execute_function(name, arguments):
     print('方法：', name)
     print('参数：', arguments)
 
-    # 检查函数是否存在
-    if name in globals():
-        # 获取函数引用
-        func = globals()[name]
+    function_map = dict(inspect.getmembers(utils_functions, inspect.isfunction))
 
-        # 将参数字符串转换为 JSON 对象
-        try:
-            arguments = json.loads(arguments)
-        except json.JSONDecodeError:
-            return {"error": "Invalid JSON format in arguments"}
-
-        # 调用函数
-        try:
-            response = func(**arguments)
-            result = {"result": response}
-            return result
-        except Exception as e:
-            return {"error": str(e)}
-    else:
+    func = function_map.get(name)
+    if not func:
         return {"error": f"Function '{name}' not found"}
+
+    try:
+        arguments = json.loads(arguments)
+        response = func(**arguments)
+        return {"result": response}
+    except json.JSONDecodeError:
+        return {"error": "Invalid JSON format in arguments"}
+    except Exception as e:
+        return {"error": str(e)}

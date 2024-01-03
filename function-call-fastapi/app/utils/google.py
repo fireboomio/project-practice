@@ -1,4 +1,3 @@
-import json
 import os
 
 import requests
@@ -29,6 +28,4 @@ class Google:
     def search(cls, query):
         data = {"q": query}
         json_response = cls._send_request(data)
-        if json_response:
-            print(json.dumps(json_response, indent=4, ensure_ascii=False))
         return json_response
