@@ -1,0 +1,41 @@
+name: Build fb-data docker image
+on: 
+  push:
+    branches:
+      - dev
+    paths_ignore:
+      - README.md
+      - .gitea/workflows/build-fb-hook.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: catthehacker/ubuntu:act-latest
+    steps:
+      - uses: https://git.fireboom.io/actions/checkout@v2
+      - name: Get current date
+        id: date
+        run: |
+          echo "DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d_%H_%M_%S')" >> $GITHUB_ENV
+      - name: Log in to Docker Hub
+        uses: https://git.fireboom.io/docker/login-action@v3
+        with:
+          registry: ${{ secrets.HARBOR_REPO_URL }}
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      - name: Build and push
+        uses: https://git.fireboom.io/docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          platforms: linux/amd64
+          tags: |
+            ${{ secrets.HARBOR_REPO_URL }}/${{ secrets.ORG_NAME }}/${{ secrets.REPO_NAME }}:${{ env.DATE }}
+            ${{ secrets.HARBOR_REPO_URL }}/${{ secrets.ORG_NAME }}/${{ secrets.REPO_NAME }}:latest
+      - uses: https://git.fireboom.io/fireboomio/kubectl-action@v2.1
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        with:
+          args: set image deployment/${{ secrets.KUBE_DEPLOYMENT }} -n ${{ secrets.KUBE_NAMESPACE }} ${{ secrets.KUBE_CONTAINER_NAME }}=${{ secrets.HARBOR_REPO_URL }}/${{ secrets.ORG_NAME }}/${{ secrets.REPO_NAME }}:${{ env.DATE }}
