@@ -17,7 +17,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: https://git.fireboom.io/docker/login-action@v3
         with:
-          registry: ${{ secrets.HARBOR_REPO_URL }}
+          registry: ${{ vars.HARBOR_REPO_URL }}
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
       - name: Build and push
@@ -28,10 +28,10 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: |
-            ${{ secrets.HARBOR_REPO_URL }}/${{ secrets.HARBOR_ORG_NAME }}/${{ secrets.HARBOR_REPO_NAME }}-fb-hook:${{ env.DATE }}
-            ${{ secrets.HARBOR_REPO_URL }}/${{ secrets.HARBOR_ORG_NAME }}/${{ secrets.HARBOR_REPO_NAME }}-fb-hook:latest
+            ${{ vars.HARBOR_REPO_URL }}/${{ vars.HARBOR_ORG_NAME }}/${{ vars.HARBOR_REPO_NAME }}-fb-hook:${{ env.DATE }}
+            ${{ vars.HARBOR_REPO_URL }}/${{ vars.HARBOR_ORG_NAME }}/${{ vars.HARBOR_REPO_NAME }}-fb-hook:latest
       - uses: https://git.fireboom.io/fireboomio/kubectl-action@v2.1
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         with:
-          args: set image deployment/${{ secrets.KUBE_DEPLOYMENT }} -n ${{ secrets.KUBE_NAMESPACE }} ${{ secrets.KUBE_CONTAINER_NAME }}=${{ secrets.HARBOR_REPO_URL }}/${{ secrets.HARBOR_ORG_NAME }}/${{ secrets.HARBOR_REPO_NAME }}-fb-hook:${{ env.DATE }}
+          args: set image deployment/${{ vars.KUBE_DEPLOYMENT }} -n ${{ vars.KUBE_NAMESPACE }} ${{ vars.KUBE_CONTAINER_NAME }}=${{ vars.HARBOR_REPO_URL }}/${{ vars.HARBOR_ORG_NAME }}/${{ vars.HARBOR_REPO_NAME }}-fb-hook:${{ env.DATE }}
